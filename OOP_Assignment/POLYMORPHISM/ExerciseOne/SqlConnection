@@ -1,0 +1,16 @@
+public class SqlConnection : DbConnection
+{
+    public SqlConnection(string connectionString) : base(connectionString) { }
+
+    public override void Open()
+    {
+        Console.WriteLine($"Opening SQL Server connection with connection string: {ConnectionString}");
+        // Here you would normally use the SQL Server API to open the connection
+    }
+
+    public override void Close()
+    {
+        Console.WriteLine("Closing SQL Server connection.");
+        // Here you would normally use the SQL Server API to close the connection
+    }
+}
